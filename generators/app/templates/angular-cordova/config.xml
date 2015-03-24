@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="winjs" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>__PROJECTNAME__</name>
+    <description>
+        __DESCRIPTION__
+    </description>
+    <author email="__AUTHOREMAIL__" href="__AUTHORURL__">
+        __AUTHORNAME__
+    </author>
+    <content src="default.html" />
+    <access origin="*" />
+</widget>
