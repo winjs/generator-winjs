@@ -65,7 +65,7 @@ module.exports = generators.Base.extend({
                                 type: "input",
                                 name: "value",
                                 message: "Cordova: Author Url?",
-                                default: "http://try.buildwinjs.com"
+                                default: "http://example.com"
                             }, function (answer) {
                                 that._authorUrl = answer.value;
                                 done();
