@@ -1,11 +1,15 @@
 {
   "name": "generator-winjs",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Yeoman generator for WinJS",
   "files": [
     "generators"
   ],
   "keywords": ["yeoman-generator"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/winjs/generator-winjs.git"
+  },
   "dependencies": {
     "yeoman-generator": "^0.17.3",
     "winjs": "^4.0.0-preview",
