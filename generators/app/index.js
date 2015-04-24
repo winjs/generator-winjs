@@ -83,12 +83,19 @@ module.exports = generators.Base.extend({
         var templateName = "blank";
         if (this._angular) {
             templateName = "angular";
+            this.copy("../../../node_modules/angular-winjs/js/angular-winjs.js", this.destinationRoot() + "/lib/angular-winjs/angular-winjs.js");
         }
         if (this._cordova) {
             templateName = (templateName === "blank") ? "cordova" : "angular-cordova";
         }
         console.log("Creating template: " + templateName);
 
+        var winjsDir = "../../../node_modules/winjs";
+        this.directory(winjsDir + "/fonts", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/fonts");
+        this.copy(winjsDir + "/css/ui-dark.css", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/css/ui-dark.css");
+        this.copy(winjsDir + "/css/ui-light.css", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/css/ui-light.css");
+        this.copy(winjsDir + "/js/WinJS.min.js", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/js/WinJS.min.js");
+        
         this.directory(templateName, this.destinationRoot(), function (content, source, dest) {
             if (source.indexOf("default.html") >= 0) {
                 content = content.replace("__PROJECTNAME__", that._name);
