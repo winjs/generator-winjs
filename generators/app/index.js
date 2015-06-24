@@ -94,7 +94,8 @@ module.exports = generators.Base.extend({
         this.directory(winjsDir + "/fonts", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/fonts");
         this.copy(winjsDir + "/css/ui-dark.css", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/css/ui-dark.css");
         this.copy(winjsDir + "/css/ui-light.css", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/css/ui-light.css");
-        this.copy(winjsDir + "/js/WinJS.min.js", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/js/WinJS.min.js");
+        this.copy(winjsDir + "/js/base.min.js", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/js/base.min.js");
+        this.copy(winjsDir + "/js/ui.min.js", this.destinationRoot() + "/lib/Microsoft.WinJS.4.0/js/ui.min.js");
         
         this.directory(templateName, this.destinationRoot(), function (content, source, dest) {
             if (source.indexOf("default.html") >= 0) {
